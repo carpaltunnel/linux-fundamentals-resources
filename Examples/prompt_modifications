@@ -1,0 +1,14 @@
+# Pull git-prompt.sh from github : https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+
+# Place it in home directory at ~/.git-prompt.sh
+
+# Source it in .bashrc : 
+source ~/.git-prompt.sh
+
+# Alter the prompt PS1 in .bashrc : 
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+
+# This is helpful, but no color.
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1) \$ '
+
