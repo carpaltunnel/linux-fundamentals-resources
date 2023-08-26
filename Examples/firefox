@@ -1,0 +1,5 @@
+#!/bin/bash
+# Pre-setup: export PATH=.:$PATH
+
+echo "Congratulations, you've just installed a virus"
+
