@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# After creating the service file, reload systemd with :
+### sudo systemctl daemon-reload
+# Enable the new service with : 
+### sudo systemctl enable SERVICENAME.service
+# Verify with : 
+### sudo systemctl is-enabled SERVICENAME.service
+
+
+
+[Unit]
+Description=Apache web server
+After=multi-user.target
+Before=???
+
+[Service]
+ExecStart=/usr/local/apache2/bin/httpd -D FOREGROUND -k start
+ExecReload=/usr/local/apache2/bin/httpd -k graceful
+Type=notify
+Restart=always
+
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target
