@@ -5,4 +5,7 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
-
+alias tailsys='tail -f /var/log/syslog'
+alias tailog='tail -f /opt/servers/apache/tomcat/logs/catalina.out'
+alias golog='cd /var/log'
+alias npmup='rm -rf ./node_modules && npm update && npm install && git diff package-lock.json'
